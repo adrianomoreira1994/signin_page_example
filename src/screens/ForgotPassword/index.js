@@ -1,4 +1,5 @@
 import React from 'react';
+import Input from '../../components/Input';
 
 import {
   Container,
@@ -6,7 +7,6 @@ import {
   Title,
   Subtitle,
   Form,
-  Input,
   SubmitContainer,
   ForgotPasswordButton,
   ForgotPasswordLabel,
@@ -26,6 +26,7 @@ export default function ForgotPassword({ navigation }) {
 
       <Form>
         <Input
+          icon="email"
           placeholder="Enter your e-mail..."
           keyboardType="email-address"
         />

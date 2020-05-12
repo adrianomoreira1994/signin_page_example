@@ -37,16 +37,6 @@ export const FormInput = styled.View`
   margin-bottom: 15px;
 `;
 
-export const Input = styled.TextInput.attrs({
-  placeholderTextColor: '#333',
-})`
-  padding-left: 15px;
-  background-color: transparent;
-  height: 60px;
-  border-radius: 20px;
-  border: 2px solid #d3d3d3;
-`;
-
 export const ForgotPasswordContainer = styled.View`
   margin-top: -15px;
   align-items: flex-end;
