@@ -19,9 +19,13 @@ import {
   SignInFacebookLabel,
   SubmitSignInContainer,
   SubmitSignInFacebookContainer,
+  NewUserContainer,
+  NewUserLabel,
+  NewUserButton,
+  NewUserButtonLabel,
 } from './styles';
 
-export default function SignIn() {
+export default function SignIn({ navigation }) {
   return (
     <Container>
       <Header>
@@ -40,7 +44,9 @@ export default function SignIn() {
       </Form>
 
       <ForgotPasswordContainer>
-        <ForgotPasswordButton>
+        <ForgotPasswordButton
+          onPress={() => navigation.navigate('ForgotPassword')}
+        >
           <ForgotPasswordLabel>Forgot Password?</ForgotPasswordLabel>
         </ForgotPasswordButton>
       </ForgotPasswordContainer>
@@ -62,6 +68,13 @@ export default function SignIn() {
           </SignInButtonFacebook>
         </SubmitSignInFacebookContainer>
       </SubmitContainer>
+
+      <NewUserContainer>
+        <NewUserLabel>I'm a new user,</NewUserLabel>
+        <NewUserButton onPress={() => navigation.navigate('SignUp')}>
+          <NewUserButtonLabel>Sign Up</NewUserButtonLabel>
+        </NewUserButton>
+      </NewUserContainer>
     </Container>
   );
 }
