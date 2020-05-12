@@ -1,5 +1,6 @@
 import React from 'react';
 import { AntDesign } from '@expo/vector-icons';
+import Input from '../../components/Input';
 
 import {
   Container,
@@ -8,7 +9,6 @@ import {
   Subtitle,
   Form,
   FormInput,
-  Input,
   ForgotPasswordContainer,
   ForgotPasswordButton,
   ForgotPasswordLabel,
@@ -35,11 +35,15 @@ export default function SignIn({ navigation }) {
 
       <Form>
         <FormInput>
-          <Input placeholder="Email ID" keyboardType="email-address" />
+          <Input
+            icon="email"
+            placeholder="Email ID"
+            keyboardType="email-address"
+          />
         </FormInput>
 
         <FormInput>
-          <Input placeholder="Password" secureTextEntry />
+          <Input icon="lock" placeholder="Password" secureTextEntry />
         </FormInput>
       </Form>
 
